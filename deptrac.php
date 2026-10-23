@@ -27,8 +27,8 @@ return static function (DeptracConfig $config, ContainerConfigurator $containerC
         ->baseline('deptrac.baseline.yaml')
         ->analyser(
             AnalyserConfig::create()
-                ->internalTag('@internal')
-                ->types(
+                ->withInternalTag('@internal')
+                ->withTypes(
                     EmitterType::CLASS_TOKEN,
                     EmitterType::CLASS_SUPERGLOBAL_TOKEN,
                     EmitterType::FILE_TOKEN,
